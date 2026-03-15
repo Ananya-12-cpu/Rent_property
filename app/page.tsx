@@ -1,4 +1,5 @@
 import Link from "next/link";
+import Image from "next/image";
 import { Navbar } from "@/components/shared/Navbar";
 import { Footer } from "@/components/shared/Footer";
 import { PropertyCard } from "@/components/user/PropertyCard";
@@ -23,7 +24,8 @@ export default function HomePage() {
           <div className="absolute bottom-10 right-20 h-96 w-96 rounded-full bg-indigo-400 blur-3xl" />
         </div>
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24 lg:py-32">
-          <div className="max-w-3xl">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+          <div>
             <div className="inline-flex items-center gap-2 bg-blue-700/60 backdrop-blur-sm border border-blue-500/40 rounded-full px-4 py-1.5 text-sm text-blue-200 mb-6">
               <Star className="h-4 w-4 text-amber-400 fill-amber-400" />
               #1 Rated Property Rental Platform
@@ -66,6 +68,16 @@ export default function HomePage() {
               ))}
             </div>
           </div>
+          <div className="relative">
+            <img
+              src="https://images.unsplash.com/photo-1564013799919-ab600027ffc6?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80"
+              alt="Beautiful rental property"
+              width={600}
+              height={400}
+              className="rounded-lg shadow-2xl"
+            />
+          </div>
+        </div>
         </div>
       </section>
 
